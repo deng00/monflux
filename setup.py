@@ -16,9 +16,6 @@ except ImportError:
 import os
 import re
 
-with open(os.path.join(os.path.dirname(__file__), 'monflux', '__init__.py')) as f:
-    version = re.search("__version__ = '([^']+)'", f.read()).group(1)
-
 with open('requirements.txt', 'r') as f:
     requires = [x.strip() for x in f if x.strip()]
 
@@ -29,8 +26,8 @@ setup(
     name='monflux',
     author="peablog",
     author_email="peablog@qq.com",
-    version=version,
-    description="monflux redis/mysql or others app and save data to influxdb",
+    version='0.0.5',
+    description="collecting and reporting redis/mysql/nginx metrics , save data to influxdb",
     long_description=readme,
     url='https://github.com/peablog/monflux',
     license='MIT License',
@@ -39,14 +36,5 @@ setup(
     tests_require=requires,
     install_requires=requires,
     extras_require={'test': requires},
-    classifiers=(
-        'Development Status :: 1 - Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Topic :: Software Development :: Libraries',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-    )
+    classifiers = [],
 )

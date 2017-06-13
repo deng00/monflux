@@ -5,6 +5,21 @@
 监控应用并将数据保存到influxdb中, 目前已经实现Redis/Mysql/Nginx监控。
 [influxdb 官方安装文档](http://docs.influxdata.com/influxdb/v1.2/introduction/installation/)
 
+# 安装
+
+## 源码安装
+
+```
+git clone https://github.com/peablog/monflux
+python setup.py install
+```
+
+## pip安装
+
+```
+pip install monflux
+```
+
 # 使用
 
 ## 基础配置
